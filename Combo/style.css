@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* min-height: 100vh; */
+}
+nav{
+    background: #000000;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 9px 15px;
+}
+nav ul li a:hover{
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #053636,
+                0 0 5px #66ffff;
+}
+nav ul ul li a:hover{
+    color:cyan;
+    box-shadow: none;
+}
+nav ul ul{
+    position: absolute;
+    top: 87px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+nav ul ul ul{
+    border-top: none;
+}
+nav ul li:hover > ul{
+    top: 72px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-items;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+    line-height: 50px;
+
+}
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+.fa-plus{
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.wrapper{
+    max-width: 600px;
+    padding: 0 20px;
+}
+.wrapper .parent-tab,
+.wrapper .child-tab{
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.18);
+}
+
+.wrapper .parent-tab label,
+.wrapper .child-tab label{
+    background: #1b1b1b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 101
+}
+.wrapper label span{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+.child-tab label span{
+    font-size: 17px;
+}
+.wrapper label .icon{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+.parent-tab input:checked ~ label .icon i:before,
+.child-tab input:checked ~ label .icon i:before{
+    content: '\f068';
+}
+.wrapper label .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrapper .parent-tab .content,
+.wrapper .child-tab .sub-content{
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content{
+    max-height: 100vh;
+}
+.tab-3 input:checked ~ .content{
+    padding: 15px 20px;
+}
+.wrapper .parent-tab .content p,
+.wrapper .child-tab .sub-content p{
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.wrapper input{
+    display: none;
+}

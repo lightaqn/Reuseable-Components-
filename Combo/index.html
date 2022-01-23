@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Amalgam</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Features</a>
+                <ul>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Element</a></li>
+                    <li><a href="#">Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">App Design</a></li>
+                    <li>
+                        <a href="#">More
+                            <span class="fa fa-plus"></span>
+                        </a>
+                        <ul>
+                            <li><a href="#">Submenu-1</a></li>
+                            <li><a href="#">Submenu-2</a></li>
+                            <li><a href="#">Submenu-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </li>    
+        </ul>
+    </nav>
+    <div class="wrapper">
+
+        <div class="parent-tab">
+            <input type="radio" name="tab" id="tab-1" checked>
+            <label for="tab-1">
+                <span>Accordion Heading One</span>
+                <div class="icon"><i class="fas fa-plus"></i></div>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nesciunt earum similique quam iusto porro ut nulla ipsa totam?</p>
+            </div>
+        </div>
+
+        <div class="parent-tab">
+            <input type="radio" name="tab" id="tab-2">
+            <label for="tab-2">
+                <span>Accordion Heading Two</span>
+                <div class="icon"><i class="fas fa-plus"></i></div>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nesciunt earum similique quam iusto porro ut nulla ipsa totam?</p>
+            </div>
+        </div>
+
+        <div class="parent-tab tab-3">
+            <input type="radio" name="tab" id="tab-3">
+            <label for="tab-3">
+                <span>Accordion Heading Three</span>
+                <div class="icon"><i class="fas fa-plus"></i></div>
+            </label>
+            <div class="content">
+
+                <div class="child-tab">
+                    <input type="checkbox" id="tab-31">
+                    <label for="tab-31">
+                        <span>Sub Heading One</span>
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                    </label>
+                    <div class="sub-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, eveniet?</p>
+                    </div>
+                </div>
+
+                <div class="child-tab">
+                    <input type="checkbox" id="tab-32">
+                    <label for="tab-32">
+                        <span>Sub Heading Two</span>
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                    </label>
+                    <div class="sub-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, eveniet?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="parent-tab">
+            <input type="radio" name="tab" id="tab-4">
+            <label for="tab-4">
+                <span>Accordion Heading Four</span>
+                <div class="icon"><i class="fas fa-plus"></i></div>
+            </label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nesciunt earum similique quam iusto porro ut nulla ipsa totam?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

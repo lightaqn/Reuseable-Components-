@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>Password Strength Indicator<br> in HTML CSS & Javascript</header>
+        <form action="#">
+            <div class="field">
+                <input onkeyup="trigger()" type="text" placeholder="Type password">
+                <span class="showBtn">SHOW</span>
+            </div>
+            <div class="indicator">
+                <span class="weak">1</span>
+                <span class="medium">2</span>
+                <span class="strong">3</span>
+                <span class="verystrong">4</span>
+            </div>
+            <div class="text">Your password is too weak</div>
+        </form>
+    </div>
+    <script>
+        const indicator = document.querySelector(".indicator");
+        const input = document.querySelector("input");
+        const weak = document.querySelector(".weak");
+        const medium = document.querySelector(".medium");
+        const strong = document.querySelector(".strong");
+        const verystrong = document.querySelector(".verystrong");
+        const text = document.querySelector(".text");
+        let regExpWeak = /[a-z]/;
+        let regExpMedium = /\d+/;
+        let regExpStrong = /[A-Z]/;
+        let regExpVerystrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+        function trigger(){
+            if(input.value !=""){
+                indicator.style.display = "block";
+                indicator.style.display = "flex";
+            }else{
+                indicator.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
